@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #page01 {
+            margin: 50px;
+            width: 50%;
+            height: 900px;
+            box-shadow: 2px 3px 4px black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+        #header {
+            width: 90%;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            margin: 20px 0px
+        }
+        #subHeader {
+            width: 90%;
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 70px;
+        }
+        #content {
+            width: 90%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id=page01>
+
+        <div id="header">
+            <h2>프로세스에 대해</h2>
+        </div>
+        <div id="subHeader">
+            <div>홍민기</div>
+        </div>
+        <div id="content">
+            front에서 back을 호출할때 데이터를 mongoDB에서 graphQL로 받아온다음 apollo로 받아와 조회된 데이터를 캐시 메모리에 저장하고 렌더링을 한다.
+
+            <br />
+            데이터의 이동 : apollo -> cache -> graphQL -> mongoDB
+        </div>
+    </div>
+</body>
+</html>
