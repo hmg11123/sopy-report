@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>REPORT</title>
     <style>
         body {
             width: 100%;
@@ -13,10 +13,18 @@
             justify-content: center;
             align-items: center;
         }
+        #img01 {
+            width: 500px;
+            height: 250px;
+        }
+        #img02 {
+            width: 500px;
+            height: 150px;
+        }
         #page01 {
             margin: 50px;
             width: 50%;
-            height: 900px;
+            height: 1700px;
             box-shadow: 2px 3px 4px black;
             display: flex;
             flex-direction: column;
@@ -47,16 +55,64 @@
     <div id=page01>
 
         <div id="header">
-            <h2>프로세스에 대해</h2>
+            <h2>PROCESS REPORT</h2>
         </div>
         <div id="subHeader">
             <div>홍민기</div>
         </div>
         <div id="content">
-            front에서 back을 호출할때 데이터를 mongoDB에서 graphQL로 받아온다음 apollo로 받아와 조회된 데이터를 캐시 메모리에 저장하고 렌더링을 한다.
+            <h3>
+                apollo의 기능
+            </h3>
+             1. grpahQL를 통해 받아오는 데이터는 무조건 cache에 저장한다<br />
+             3. apollo는 grpahQL과 통신할수 있다<br />
+             3. 다시 렌더를 할때  cache에서 받아오기 때문에 매우 빠르게 데이터를 가져올수 있다<br /><br />
+            <h3>
+                apollo의 사용법
+            </h3>
+             1. [import]로 ApolloProvider를 받아온다<br />
+             2. client라는 인자안에 backEnd랑 연결하는 파일을 불러와 넣어준다<br />
+             3. [App.js]를 한번더 감싸서 사용한다<br />
+
+              <br />
+              <img src="1.PNG" id="img01"/>
+              <br />
+              <br />
+              <br />
+              <br />
+             <h3>
+                graphQL의 기능
+            </h3>
+             1. ORM이라는 특성을 가지고 있다<br />
+             2. ORM과 ODM은 데이터베이스를 CRUD하는 걸 도와주는 플렛폼이다<br /><br />
+            <h3>
+                graphQL의 사용법
+            </h3>
+            1. 리졸버에는 javascript파일, query는 graphQL파일로 만들어 준다<br />
+            2. 리졸버에는 query에서 사용될 기능을 넣어준다.
+            <br /><br />
+            <img src="2.PNG" id="img02"/>
 
             <br />
+            <br />
+            <br />
+            <h3>
+                process
+            </h3>
+            frontEnd에서 apollo로 backEnd에 신호를 보내면 grpahQL은 mongoDB에서 데이터를 받아온다음 CRUD를 할수 있게 도와주고 frontEnd로 넘겨준다.
+            graphQL로 데이터를 받아서 cache에 저장하고 렌더한다
+
+            <br />
+            <br />
             데이터의 이동 : apollo -> cache -> graphQL -> mongoDB
+
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            [ ] : 변경 가능함
         </div>
     </div>
 </body>
